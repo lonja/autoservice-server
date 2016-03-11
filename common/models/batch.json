@@ -1,0 +1,33 @@
+{
+  "name": "Batch",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "strict": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "detailId": {
+      "type": "number",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "quantity": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "detail": {
+      "type": "belongsTo",
+      "model": "Detail",
+      "foreignKey": "detailId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

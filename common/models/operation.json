@@ -1,0 +1,40 @@
+{
+  "name": "Operation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "strict": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "length": 50
+    },
+    "price": {
+      "type": "number",
+      "required": true
+    },
+    "duration": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "repairs": {
+      "type": "hasMany",
+      "model": "Repair",
+      "foreignKey": ""
+    },
+    "details": {
+      "type": "hasMany",
+      "model": "Detail",
+      "foreignKey": "",
+      "through": "OperationDetail"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Repair",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "strict": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "operationId": {
+    },
+    "masterId": {
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "expDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "operation": {
+      "type": "belongsTo",
+      "model": "Operation",
+      "foreignKey": "operationId"
+    },
+    "master": {
+      "type": "belongsTo",
+      "model": "Master",
+      "foreignKey": "masterId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Master",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "strict": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "surname": {
+      "type": "string",
+      "required": true,
+      "length": 50
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "length": 50
+    },
+    "patronymic": {
+      "type": "string",
+      "length": 50
+    },
+    "birthDate": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "repairs": {
+      "type": "hasMany",
+      "model": "Repair",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,41 @@
+{
+  "name": "OperationDetail",
+  "plural": "OperationsDetails",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "strict": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "operationId": {
+      "type": "number",
+      "required": true,
+      "id": 1
+    },
+    "detailId": {
+      "type": "number",
+      "required": true,
+      "id": 2
+    },
+    "quantity": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "operation": {
+      "type": "belongsTo",
+      "model": "Operation",
+      "foreignKey": "operationId"
+    },
+    "detail": {
+      "type": "belongsTo",
+      "model": "Detail",
+      "foreignKey": "detailId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
